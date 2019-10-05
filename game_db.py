@@ -1,0 +1,15 @@
+import pyodbc
+
+class Game_db:
+    def __init__(self, server, database, username, password):
+        self.server = server
+        self.database = database
+        self.username = username
+        self.password = password
+        self.connect_gamedb = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + self.server + ';DATABASE=' + self.database + ';UID=' + self.username + ';PWD=' + self.password)
+        self.cursor = self.connect_gamedb.cursor()
+
+    def cursor_execute(self, query):
+        return self.cursor.execute(query)
+
+    def create_gamelist(self, ):
