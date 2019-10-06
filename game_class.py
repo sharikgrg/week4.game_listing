@@ -1,5 +1,4 @@
 import requests
-import json
 class Game:
     def __init__(self, name, price, location = '125 London Wall'):
         self.name = name

@@ -16,5 +16,7 @@ class Game_db:
         self.cursor_execute(f"INSERT INTO listing(GameName, Price, Location, Longitude, Latitude) VALUES('{name}', {price}, '{location}', {longitude}, {latitude})")
         self.connect_gamedb.commit()
 
+    # def
+
 
 
