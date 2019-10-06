@@ -12,4 +12,9 @@ class Game_db:
     def cursor_execute(self, query):
         return self.cursor.execute(query)
 
-    def create_gamelist(self, ):
+    def create_gamelist(self, name = '', price = ' ', longitude = ' ', latitude = ' ', location = '125 London Wall'):
+        self.cursor_execute(f"INSERT INTO listing(GameName, Price, Location, Longitude, Latitude) VALUES('{name}', {price}, '{location}', {longitude}, {latitude})")
+        self.connect_gamedb.commit()
+
+
+
