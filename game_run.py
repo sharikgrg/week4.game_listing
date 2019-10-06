@@ -20,3 +20,5 @@ long = game.longitude_api()
 # game.latitude()
 
 list.retrieve_all_games()
+
+list.retrieve_one_game('Tomb Raider')

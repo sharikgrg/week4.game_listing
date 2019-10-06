@@ -21,5 +21,9 @@ class Game_db:
         for game in query:
             print(game)
 
+    def retrieve_one_game(self,name):
+        query = self.cursor_execute(f"SELECT * FROM listing WHERE GameName like '%{name}%'").fetchone()
+        print(query)
+
 
 
