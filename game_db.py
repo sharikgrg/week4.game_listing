@@ -1,5 +1,5 @@
 import pyodbc
-
+# this class is used to connect to any SQL databases and servers, and execute queries
 class Game_db:
     def __init__(self, server, database, username, password):
         self.server = server

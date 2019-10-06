@@ -1,4 +1,5 @@
 import requests
+## This class is used for API to give geolocation and also to give in game details
 class Game:
     def __init__(self, name, price, location = '125 London Wall'):
         self.name = name
