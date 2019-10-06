@@ -18,3 +18,5 @@ long = game.longitude_api()
 # list.create_gamelist(game1.get_name(), game1.get_price(), long, lat)
 # list.create_gamelist(game2.get_name(), game2.get_price(), long, lat)
 # game.latitude()
+
+list.retrieve_all_games()

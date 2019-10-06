@@ -16,7 +16,10 @@ class Game_db:
         self.cursor_execute(f"INSERT INTO listing(GameName, Price, Location, Longitude, Latitude) VALUES('{name}', {price}, '{location}', {longitude}, {latitude})")
         self.connect_gamedb.commit()
 
-    # def
+    def retrieve_all_games(self):
+        query = self.cursor_execute("SELECT * FROM listing").fetchall()
+        for game in query:
+            print(game)
 
 
 
