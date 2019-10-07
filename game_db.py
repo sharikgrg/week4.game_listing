@@ -25,5 +25,8 @@ class Game_db:
         query = self.cursor_execute(f"SELECT * FROM listing WHERE GameName like '%{name}%'").fetchone()
         print(f'ID: {query[0]}, Name: {query[1]}, Price: {query[2]}, Location: {query[3]}, Latitude: {query[4]}, Longitude: {query[5]}')
 
+    def update_gamename(self, name, ID):
+        self.cursor_execute(f"UPDATE listing SET GameName = '{name}' WHERE GameID = {ID}")
+        self.connect_gamedb.commit()
 
 

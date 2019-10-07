@@ -1,4 +1,4 @@
-# Listing game and Geo Location API:
+# Listing game and Geo Location API: :bowtie:
 
 - As a user I can Create a game to the listing 
 - As a user I can read one game from the listing

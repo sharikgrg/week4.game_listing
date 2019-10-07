@@ -25,5 +25,9 @@ long = game.longitude_api()
 ## As a user i can read all games list
 listing_server.retrieve_all_games()
 
+
 ## AS a user I can read one game
 listing_server.retrieve_one_game('Tomb Raider')
+
+## Updating Game name using ID
+listing_server.update_gamename('GTA V', 1)
