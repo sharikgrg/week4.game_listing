@@ -24,19 +24,20 @@ while choice != 5:
                 print('Going back to the main menu')
                 time.sleep(1)
             else:
-                print('choose a valid number')
+                print(f'Choose a Valid number {emoji.emojize(":zipper-mouth_face:")}')
 
     elif choice == 2:
-        while choice != 2:
-            choice = int(input('choose 1 to look for game, 2 to go back to the main menu: '))
-            if choice == 1:
+        value = ' '
+        while value != 2:
+            value = int(input('choose 1 to look for game, 2 to go back to the main menu: '))
+            if value == 1:
                 name = input('what is the name of the game? ')
                 game_db.retrieve_one_game(name)
-            elif choice == 2:
+            elif value == 2:
                 print('Going back to the main menu')
                 time.sleep(1)
             else:
-                print('choose a valid number')
+                print(f'Choose a Valid number {emoji.emojize(":zipper-mouth_face:")}')
 
     elif choice == 3:
         while choice != 2:
@@ -44,14 +45,15 @@ while choice != 5:
             if choice == 1:
                 name = input('GameName: ')
                 price = float(input('Price: '))
-                game = Game(name, price)
+                postcode = input('Postcode: ')
+                game = Game(name, price, postcode)
                 listing_server.create_gamelist(game.get_name(), game.get_price(), game.longitude_api(), game.latitude_api())
                 print('GAME HAS BEEN ADDED')
             elif choice == 2:
                 print('Going back to the main menu')
                 time.sleep(1)
             else:
-                print('choose a valid number')
+                print(f'Choose a Valid number {emoji.emojize(":zipper-mouth_face:")}')
 
     elif choice == 4:
         while choice != 2:
@@ -65,7 +67,7 @@ while choice != 5:
                 print('Going back to the main menu')
                 time.sleep(1)
             else:
-                print('choose a valid number')
+                print(f'Choose a Valid number {emoji.emojize(":zipper-mouth_face:")}')
 
 
     elif choice == 5:
@@ -74,4 +76,5 @@ while choice != 5:
         break
 
     else:
-        print('Choose a Valid number')
+        print(f'Choose a Valid number {emoji.emojize(":zipper-mouth_face:")}')
+        time.sleep(1)
