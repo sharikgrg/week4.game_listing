@@ -1,6 +1,7 @@
 from game_db import *
 from game_class import *
 import time
+import emoji
 #### connecting to the SQL server###
 server = 'localhost,1433'
 database = 'Games'
@@ -68,7 +69,7 @@ while choice != 5:
 
 
     elif choice == 5:
-        print('Exitting')
+        print(f'Exitting {emoji.emojize(":grinning_face_with_big_eyes:")}')
         time.sleep(1)
         break
 

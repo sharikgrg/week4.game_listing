@@ -17,9 +17,12 @@ class Game_db:
         self.connect_gamedb.commit()
 
     def retrieve_all_games(self):
-        query = self.cursor_execute("SELECT * FROM listing").fetchall()
+        query = self.cursor_execute("SELECT * FROM listing")#.fetchone()
         for game in query:
-            print(f'ID: {game[0]}, Name: {game[1]}, Price: {game[2]}, Location: {game[3]}, Latitude: {game[4]}, Longitude: {game[5]}')
+            if game is None:
+                break
+            else:
+                print(f'ID: {game[0]}, Name: {game[1]}, Price: {game[2]}, Location: {game[3]}, Latitude: {game[4]}, Longitude: {game[5]}')
 
     def retrieve_one_game(self,name):
         query = self.cursor_execute(f"SELECT * FROM listing WHERE GameName like '%{name}%'").fetchone()
