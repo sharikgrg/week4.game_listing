@@ -19,11 +19,11 @@ class Game_db:
     def retrieve_all_games(self):
         query = self.cursor_execute("SELECT * FROM listing").fetchall()
         for game in query:
-            print(game)
+            print(f'ID: {game[0]}, Name: {game[1]}, Price: {game[2]}, Location: {game[3]}, Latitude: {game[4]}, Longitude: {game[5]}')
 
     def retrieve_one_game(self,name):
         query = self.cursor_execute(f"SELECT * FROM listing WHERE GameName like '%{name}%'").fetchone()
-        print(query)
+        print(f'ID: {query[0]}, Name: {query[1]}, Price: {query[2]}, Location: {query[3]}, Latitude: {query[4]}, Longitude: {query[5]}')
 
 
 
